@@ -1,5 +1,9 @@
 package Stratego.Logique.Pawn;
 
+import Stratego.Logique.Other.Board;
+import Stratego.Logique.Other.Box;
+import Stratego.Logique.Player.Player;
+
 public abstract class ManyCase
 {
     final int nbcase;

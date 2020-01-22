@@ -1,3 +1,5 @@
+package Stratego.Logique.Pawn;
+
 public class Lieutenant
 {
     /**

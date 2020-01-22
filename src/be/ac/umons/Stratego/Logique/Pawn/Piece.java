@@ -1,6 +1,9 @@
 package Stratego.Logique.Pawn;
 
-public abstract class Pawn
+import Stratego.Logique.Other.Box;
+import Stratego.Logique.Player.Player;
+
+public abstract class Piece
 {
     enum IdPiece{E01,E02,D03,S04,L05,C06,C07,C08,G09,M10,D00,B11}; //c'est première lettre du nom + grade
     protected Box position;
@@ -11,7 +14,7 @@ public abstract class Pawn
     protected boolean visible = false; /*permet de voir si l'adversiare l'a déjà vu*/
     protected boolean jattaque = false; /*permet de savoir s'il y a eu une attaque lors d'un déplacement*/
 
-    public Pawn(Player joueur_, NamePiece nom, IdPiece id_)//changer avec nom du joueur directement
+    public Piece(Player joueur_, NomPiece nom, IdPiece id_)//changer avec nom du joueur directement
     {
         joueur = joueur_;
         this.monNom = nom;
@@ -29,7 +32,7 @@ public abstract class Pawn
     {
         if(!this.vivant)
         {
-            Summary.WRITE("stateLife : le piont " + this + "est mort");
+            //Summary.WRITE("stateLife : le piont " + this + "est mort");
             position.from();
             position = null;
             joueur.dead();    /*on appelle la méthode dead du joueur pour lui dire que ce pion est mort*/
@@ -50,12 +53,12 @@ public abstract class Pawn
         {
             position = endroit;
             position.arrived(this);
-            Summary.WRITE("placeMe : "+ this.monNom + " en " + endroit);
+            //Summary.WRITE("placeMe : "+ this.monNom + " en " + endroit);
             return true;
         }
         else
         {
-            Summary.WRITE("placeMe : erreur d'emplacement pour ce pion("+this+")");
+            //Summary.WRITE("placeMe : erreur d'emplacement pour ce pion("+this+")");
             return false;
         }
     }
@@ -89,5 +92,5 @@ public abstract class Pawn
 
     /*les méthodes abstraites (définit dans MovePiece et AttackOpponent)*/
     public abstract boolean possible(Box position);
-    public abstract void attack(Pawn pion);
+    public abstract void attack(Piece pion);
 }
