@@ -1,6 +1,8 @@
 package Stratego.Logique.Pawn;
 
-public class Minesweeper
+import Stratego.Logique.Player.Player;
+
+public class Minesweeper extends OneCase
 {
     /**
      *Liste des pièces qui peuvent le tuer.

@@ -1,6 +1,9 @@
 package Stratego.Logique.Pawn;
 
-public class Flag
+import Stratego.Logique.Other.Box;
+import Stratego.Logique.Player.Player;
+
+public class Flag extends Piece
 {
     public Flag(Player joueur)
     {

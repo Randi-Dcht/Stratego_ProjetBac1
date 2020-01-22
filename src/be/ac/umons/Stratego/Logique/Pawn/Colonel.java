@@ -1,6 +1,8 @@
 package Stratego.Logique.Pawn;
 
-public class Colonel
+import Stratego.Logique.Player.Player;
+
+public class Colonel extends OneCase
 {
     /**
      *Liste des pièces qui peuvent le tuer.

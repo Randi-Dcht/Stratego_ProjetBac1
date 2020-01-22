@@ -45,7 +45,6 @@ public abstract class Piece
      *Cette méthode est <b> appelé juste une fois </b> lorsque l'on veut placer le pion sur la grille
 
      @param endroit qui est un emplacement dans la grille
-     @throws InvalidBoxExecption quand le pion est placé dans le mauvais espace.
      */
     public boolean placeMe(Box endroit)
     {

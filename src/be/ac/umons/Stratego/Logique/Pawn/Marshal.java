@@ -1,6 +1,8 @@
 package Stratego.Logique.Pawn;
 
-public class Marshal
+import Stratego.Logique.Player.Player;
+
+public class Marshal extends OneCase
 {
     /**
      *Liste des pièces qui peuvent le tuer.

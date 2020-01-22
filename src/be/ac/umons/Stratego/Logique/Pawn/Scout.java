@@ -1,6 +1,8 @@
 package Stratego.Logique.Pawn;
 
-public class Scout
+import Stratego.Logique.Player.Player;
+
+public class Scout extends ManyCase
 {
     /**
      *Liste des pièces qui peuvent le tuer.

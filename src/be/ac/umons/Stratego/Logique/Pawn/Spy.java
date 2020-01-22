@@ -1,6 +1,8 @@
 package Stratego.Logique.Pawn;
 
-public class Spy
+import Stratego.Logique.Player.Player;
+
+public class Spy extends OneCase
 {
     /**
      *Liste des pièces qui peuvent le tuer.

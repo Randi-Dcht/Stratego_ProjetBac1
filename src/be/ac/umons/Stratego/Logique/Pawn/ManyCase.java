@@ -4,7 +4,7 @@ import Stratego.Logique.Other.Board;
 import Stratego.Logique.Other.Box;
 import Stratego.Logique.Player.Player;
 
-public abstract class ManyCase
+public abstract class ManyCase extends AttackOpponent
 {
     final int nbcase;
 
@@ -18,10 +18,7 @@ public abstract class ManyCase
     /**
      *Cette méthode est méthode redefinis pour un piont qui peut se déplacer sur
      *plusieurs cases à la fois.
-
-     @throws InvalidBoxExecption quand le pion va sur une case non autoriséee.
      @param position qui est la case où le pion veut aller.
-     @see displacement(MovePiece) qui est la méthode de déplaement principale.
      */
     public boolean possible(Box position) //throws InvalidBoxExecption
     {

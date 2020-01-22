@@ -1,8 +1,11 @@
 package Stratego.Logique.Pawn;
 
-public abstract class MovePiece
+import Stratego.Logique.Other.Box;
+import Stratego.Logique.Player.Player;
+
+public abstract class MovePiece extends Piece
 {
-    public MovePiece(Player joueur, NomPiece nom,IdPiece id)
+    public MovePiece(Player joueur, NomPiece nom, IdPiece id)
     {
         super(joueur,nom,id);
 
@@ -45,15 +48,13 @@ public abstract class MovePiece
      *Cette méthode permet de déplacer le pion sur le grille en <b>modifiant</b> la varaible position.
 
      @param position elle prend uniquement la case où le pion sera après son déplacement.
-     @throws InvalidBoxExecption si le pion veut aller sur une case déjà occupé ou inexistante.
-     @see attack elle regarde si la case d'arrivé comporte un pion adverse pour pouvoir l'attaquer.
      */
-    public boolean possible(Box position) //throws InvalidBoxExecption
+    public boolean possible(Box position)
     {
         jattaque = false;
         if(position.player() != this.joueur && goright(delta(position)))
         {
-            Summary.WRITE("displacement : déplacement de "+ this + " à " + position);
+            //Summary.WRITE("displacement : déplacement de "+ this + " à " + position);
             if (position.occupe && position.whoOccupant() != null) //regarde s'il est possible d'attaquer un piont adverse et appelle la méthode t'attaque.
             {
                 jattaque = true;
@@ -69,7 +70,7 @@ public abstract class MovePiece
             }
             //return true;
         }
-        Summary.WRITE("displacement :"+this.monNom+" déplecement impossible en " + position);
+        //Summary.WRITE("displacement :"+this.monNom+" déplecement impossible en " + position);
         return false;
     }
 

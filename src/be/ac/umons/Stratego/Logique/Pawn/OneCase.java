@@ -1,6 +1,9 @@
 package Stratego.Logique.Pawn;
 
-public abstract class OneCase
+import Stratego.Logique.Other.Box;
+import Stratego.Logique.Player.Player;
+
+public abstract class OneCase extends AttackOpponent
 {
     public OneCase(Player joueur, NomPiece nom, IdPiece id)
     {
@@ -28,12 +31,12 @@ public abstract class OneCase
     /**
      *Méthode de déplacement général qui appelle les autres méthodes pour vérifier le bon déplacement
      *d'une case à la fois.
-     @param case d'arrivée.
+     @param position d'arrivée.
      @return true si le pion s'est déplacé sinon false.
      */
     public boolean possible(Box position) //throws InvalidBoxExecption
     {
-        Summary.WRITE("displacement : " + this + " veut déplace d'une case");
+        //Summary.WRITE("displacement : " + this + " veut déplace d'une case");
         if(oneByOne(position))
         {
             return super.possible(position);

@@ -1,6 +1,9 @@
 package Stratego.Logique.Pawn;
 
-public class Bomb
+import Stratego.Logique.Other.Box;
+import Stratego.Logique.Player.Player;
+
+public class Bomb extends Piece
 {
     public Bomb(Player joueur)
     {
@@ -19,7 +22,6 @@ public class Bomb
      *la bombe ne peut pas se déplacer donc return false.
      @return false
      */
-
     public boolean possible(Box position)
     {
         return false;
