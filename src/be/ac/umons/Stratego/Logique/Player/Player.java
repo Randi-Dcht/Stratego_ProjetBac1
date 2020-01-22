@@ -1,6 +1,6 @@
-package Stratego.Logique.Player;
+package be.ac.umons.Stratego.Logique.Player;
 
-import Stratego.Logique.Pawn.Piece;
+import be.ac.umons.Stratego.Logique.Pawn.Piece;
 
 public interface Player
 {

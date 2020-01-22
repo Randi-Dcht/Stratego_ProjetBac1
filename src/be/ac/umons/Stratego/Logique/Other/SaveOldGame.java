@@ -1,7 +1,7 @@
-package Stratego.Logique.Other;
+package be.ac.umons.Stratego.Logique.Other;
 
-import Stratego.Gui.BoardGui;
-import Stratego.Logique.Player.Player;
+import be.ac.umons.Stratego.Gui.BoardGui;
+import be.ac.umons.Stratego.Logique.Player.Player;
 import javafx.stage.Stage;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

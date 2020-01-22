@@ -1,9 +1,9 @@
-package Stratego.Gui;
+package be.ac.umons.Stratego.Gui;
 
-import Stratego.Logique.Other.Automatic;
-import Stratego.Logique.Other.Board;
-import Stratego.Logique.Other.Box;
-import Stratego.Logique.Player.Player;
+import be.ac.umons.Stratego.Logique.Other.Automatic;
+import be.ac.umons.Stratego.Logique.Other.Board;
+import be.ac.umons.Stratego.Logique.Other.Box;
+import be.ac.umons.Stratego.Logique.Player.Player;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;

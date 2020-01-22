@@ -1,6 +1,6 @@
-package Stratego.Logique.Pawn;
+package be.ac.umons.Stratego.Logique.Pawn;
 
-import Stratego.Logique.Player.Player;
+import be.ac.umons.Stratego.Logique.Player.Player;
 
 public class Colonel extends OneCase
 {

@@ -1,8 +1,8 @@
-package Stratego.Logique.Other;
+package be.ac.umons.Stratego.Logique.Other;
 
-import Stratego.Logique.Pawn.NomPiece;
-import Stratego.Logique.Pawn.Piece;
-import Stratego.Logique.Player.Player;
+import be.ac.umons.Stratego.Logique.Pawn.NomPiece;
+import be.ac.umons.Stratego.Logique.Pawn.Piece;
+import be.ac.umons.Stratego.Logique.Player.Player;
 import java.util.ArrayList;
 import java.util.Random;
 

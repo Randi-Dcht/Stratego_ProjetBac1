@@ -1,11 +1,11 @@
-package Stratego.Gui;
+package be.ac.umons.Stratego.Gui;
 
-import Stratego.Logique.Other.Board;
-import Stratego.Logique.Other.Box;
-import Stratego.Logique.Other.SaveOldGame;
-import Stratego.Logique.Other.StateGame;
-import Stratego.Logique.Pawn.Piece;
-import Stratego.Logique.Player.Player;
+import be.ac.umons.Stratego.Logique.Other.Board;
+import be.ac.umons.Stratego.Logique.Other.Box;
+import be.ac.umons.Stratego.Logique.Other.SaveOldGame;
+import be.ac.umons.Stratego.Logique.Other.StateGame;
+import be.ac.umons.Stratego.Logique.Pawn.Piece;
+import be.ac.umons.Stratego.Logique.Player.Player;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;

@@ -1,6 +1,6 @@
-package Stratego.Logique.Other;
+package be.ac.umons.Stratego.Logique.Other;
 
-import Stratego.Logique.Player.Player;
+import be.ac.umons.Stratego.Logique.Player.Player;
 
 public class StateGame
 {

@@ -1,10 +1,9 @@
-package Stratego.Gui;
+package be.ac.umons.Stratego.Gui;
 
-import Stratego.Logique.Pawn.Piece;
-import javafx.application.Application;
+import be.ac.umons.Stratego.Logique.Pawn.Piece;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
+
 
 public class ImageCouple
 {

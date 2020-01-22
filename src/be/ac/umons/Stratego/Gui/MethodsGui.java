@@ -1,14 +1,10 @@
-package Stratego.Gui;
+package be.ac.umons.Stratego.Gui;
 
-import Stratego.Logique.Other.Board;
-import Stratego.Logique.Other.StartPiece;
-import Stratego.Logique.Pawn.Piece;
-import Stratego.Logique.Player.Couleur;
-import Stratego.Logique.Player.HumanPlayer;
-import Stratego.Logique.Player.Player;
-import javafx.application.Application;
-import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
+import be.ac.umons.Stratego.Logique.Other.Board;
+import be.ac.umons.Stratego.Logique.Other.StartPiece;
+import be.ac.umons.Stratego.Logique.Player.Couleur;
+import be.ac.umons.Stratego.Logique.Player.HumanPlayer;
+import be.ac.umons.Stratego.Logique.Player.Player;
 
 public class MethodsGui
 {

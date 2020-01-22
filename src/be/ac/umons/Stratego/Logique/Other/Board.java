@@ -1,4 +1,4 @@
-package Stratego.Logique.Other;
+package be.ac.umons.Stratego.Logique.Other;
 
 public class Board
 {

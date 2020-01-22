@@ -1,4 +1,4 @@
-package Stratego.Logique.Pawn;
+package be.ac.umons.Stratego.Logique.Pawn;
 
 public enum NomPiece
 {

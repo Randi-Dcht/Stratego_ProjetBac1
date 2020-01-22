@@ -1,8 +1,8 @@
-package Stratego.Logique.Pawn;
+package be.ac.umons.Stratego.Logique.Pawn;
 
-import Stratego.Logique.Other.Board;
-import Stratego.Logique.Other.Box;
-import Stratego.Logique.Player.Player;
+import be.ac.umons.Stratego.Logique.Other.Board;
+import be.ac.umons.Stratego.Logique.Other.Box;
+import be.ac.umons.Stratego.Logique.Player.Player;
 
 public abstract class ManyCase extends AttackOpponent
 {

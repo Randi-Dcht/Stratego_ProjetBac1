@@ -1,4 +1,4 @@
-package Stratego.Logique.Player;
+package be.ac.umons.Stratego.Logique.Player;
 
 public class Couleur
 {

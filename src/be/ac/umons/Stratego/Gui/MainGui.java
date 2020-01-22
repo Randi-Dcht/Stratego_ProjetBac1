@@ -1,8 +1,8 @@
-package Stratego.Gui;
+package be.ac.umons.Stratego.Gui;
 
-import Stratego.Logique.Other.Board;
-import Stratego.Logique.Other.SaveOldGame;
-import Stratego.Logique.Player.Couleur;
+import be.ac.umons.Stratego.Logique.Other.Board;
+import be.ac.umons.Stratego.Logique.Other.SaveOldGame;
+import be.ac.umons.Stratego.Logique.Player.Couleur;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
