@@ -11,7 +11,7 @@ public class Board
      */
     public static void createTray(int x, int y)
     {
-        Summary.WRITE("createTray : création d'un tableau de " + x + " sur " + y);
+        //Summary.WRITE("createTray : création d'un tableau de " + x + " sur " + y);
         Box[][] tableau = new Box[x][y];
         for(int i =0; i < x ; i++)
         {
@@ -30,7 +30,7 @@ public class Board
     public static void createBarriers(int[][] liste)
     {
         int cnt=0;
-        Summary.WRITE("createBarriers : création de " + liste.length + " obstacles.");
+        //Summary.WRITE("createBarriers : création de " + liste.length + " obstacles.");
         while(cnt < liste.length)
         {
             findCase(liste[cnt][0],liste[cnt][1]).occupe = true;
@@ -49,7 +49,7 @@ public class Board
     {
         if(0 <= x && x < plateau.length && 0 <= y && y < plateau.length)
         {
-            Summary.WRITE("findCase : recherche de la case ["+ x + "];[" + y +"]");
+            //Summary.WRITE("findCase : recherche de la case ["+ x + "];[" + y +"]");
             return plateau[x][y];
         }
         return null;

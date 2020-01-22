@@ -1,5 +1,8 @@
 package Stratego.Logique.Other;
 
+import Stratego.Logique.Pawn.NomPiece;
+import Stratego.Logique.Pawn.Piece;
+import Stratego.Logique.Player.Player;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -40,7 +43,7 @@ public class Automatic
      *Cette méthode permet de placer les pions de l'ordinateur avec une certaines constante
      *comme le drapeau entouré de bombe, etc.
      */
-    public static void place(Piece piece,ArrayList<Box>liste)
+    public static void place(Piece piece, ArrayList<Box>liste)
     {
         int valeur = 0;
         Box place;

@@ -1,6 +1,6 @@
 package Stratego.Logique.Pawn;
 
-enum NomPiece
+public enum NomPiece
 {
     general,
     marechal,

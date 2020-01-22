@@ -6,7 +6,7 @@ public class StateGame
 {
     /**
      *Cette méthode permet de voir si le drapeau a été attrapé par un des adversaires.
-     @param joueurs qui est une liste des joueur qui joue la partie.
+     @param joueur qui est une liste des joueur qui joue la partie.
      @return true si le drapeau est attrapé sinon false.
      */
     public static boolean endGame(Player[] joueur)
@@ -14,7 +14,7 @@ public class StateGame
         int cnt =0;
         for(int j=0; j < joueur.length ; j++ )
         {
-            if (!joueur[j].myList()[0].vivant)
+            if (!joueur[j].myList()[0].getLife())
             {
                 //Summary.WRITE("endGame : la partie est terminé, drapeau de " + joueur[j].myName() + " est attrapé");
                 return true;

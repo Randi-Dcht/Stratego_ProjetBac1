@@ -5,8 +5,8 @@ import Stratego.Logique.Player.Player;
 
 public class Box
 {
-    final int x; //on peut pas modifier x car la case est fixe
-    final int y; //on peut pas modifier y car la case est fixe
+    public final int x; //on peut pas modifier x car la case est fixe
+    public final int y; //on peut pas modifier y car la case est fixe
     public boolean occupe = false;
     private Piece occupant = null;
 

@@ -7,9 +7,9 @@ public abstract class Piece
 {
     enum IdPiece{E01,E02,D03,S04,L05,C06,C07,C08,G09,M10,D00,B11}; //c'est première lettre du nom + grade
     protected Box position;
-    final Player joueur;               /*Utiliser dans la méthode stateLife pour prévenir le joueur*/
-    final NomPiece monNom;
-    final IdPiece id;
+    public final Player joueur;               /*Utiliser dans la méthode stateLife pour prévenir le joueur*/
+    public final NomPiece monNom;
+    public final IdPiece id;
     protected boolean vivant = true;   /*permet de savoir si le pion est mort ou vivant*/
     protected boolean visible = false; /*permet de voir si l'adversiare l'a déjà vu*/
     protected boolean jattaque = false; /*permet de savoir s'il y a eu une attaque lors d'un déplacement*/
@@ -87,6 +87,11 @@ public abstract class Piece
             return true;
         }
         return false;
+    }
+
+    public boolean getLife()
+    {
+        return vivant;
     }
 
     /*les méthodes abstraites (définit dans MovePiece et AttackOpponent)*/
