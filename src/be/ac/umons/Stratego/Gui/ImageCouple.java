@@ -7,7 +7,7 @@ import javafx.scene.image.ImageView;
 
 public class ImageCouple
 {
-    final String cheminAcces = "../code/Illustration/";
+    final String cheminAcces = "../misc/IMG/";
     public Piece piece;
     public ImageView ancien;
     public ImageView image;

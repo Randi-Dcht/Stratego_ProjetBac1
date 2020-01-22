@@ -6,7 +6,7 @@
 <!--permet de compiler le jeu pour avoir les fichier .class-->
   <target name="build">
     <mkdir dir="compile"/>
-    <javac srcdir="code" destdir="compile" encoding="utf8" classpath="code/lib/junit-4.12.jar:code/lib/jfxrt.jar">
+    <javac srcdir="src" destdir="compile" encoding="utf8" classpath="lib/junit-4.12.jar:lib/jfxrt.jar">
     </javac>
   </target>
 
@@ -38,8 +38,8 @@
 <!--permet de générer la documentation du jeu-->
   <target name="doc">
     <mkdir dir="documentation"/>
-    <javadoc sourcepath="code/src" destdir="documentation" >
-        <fileset dir="code/src" defaultexcludes="yes">
+    <javadoc sourcepath="src" destdir="documentation" >
+        <fileset dir="src" defaultexcludes="yes">
              <include name="**" />
         </fileset>
     </javadoc>
@@ -48,7 +48,7 @@
 
 <!--permet de lancer le jeu en interface graphique-->
   <target name="run">
-    <java classname="MainGUI" classpath="compile:code/lib/jfxrt.jar"/>
+    <java classname="be.ac.umons.Stratego.Gui.MainGui" classpath="compile:lib/jfxrt.jar"/>
   </target>
 
 </project>

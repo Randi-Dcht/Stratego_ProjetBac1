@@ -26,7 +26,7 @@ public class SaveOldGame
         try
         {
             ObjectOutputStream sortie;
-            sortie = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(new File("misc/FichierSauvegarde/" + fichier+".save"))));
+            sortie = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(new File("misc/" + fichier+".save"))));
             sortie.writeObject(joueurs);
             sortie.writeObject(plateauJeu);
             sortie.writeObject(paysage);
@@ -47,7 +47,7 @@ public class SaveOldGame
         try
         {
             ObjectInputStream entree;
-            entree = new ObjectInputStream(new BufferedInputStream(new FileInputStream(new File("misc/FichierSauvegarde/" + fichier +".save"))));
+            entree = new ObjectInputStream(new BufferedInputStream(new FileInputStream(new File("misc/" + fichier +".save"))));
             Player[] liste = (Player[]) entree.readObject();
             Box[][] plateau = (Box[][]) entree.readObject();
             String[] paysage = (String[]) entree.readObject();
@@ -80,7 +80,7 @@ public class SaveOldGame
     {
         try
         {
-            File supprime = new File("misc/FichierSauvegarde/" + fichier +".save");
+            File supprime = new File("misc/" + fichier +".save");
             supprime.delete();
         }
         catch(Exception e)
@@ -104,7 +104,7 @@ public class SaveOldGame
      */
     public static File[] listItems()
     {
-        File repertoire = new File("misc/FichierSauvegarde/");
+        File repertoire = new File("misc/");
         File[] fichiers =repertoire.listFiles();
         return fichiers;
     }

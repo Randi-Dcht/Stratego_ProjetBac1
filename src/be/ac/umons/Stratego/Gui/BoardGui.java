@@ -31,12 +31,11 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.util.Random;
 
 public class BoardGui extends Application
 {
-    final String cheminAcces = "../code/Illustration/";
+    final String cheminAcces = "../misc/IMG/";
     final String nomPartie;
 
     public Player[] joueur;           //les joueurs de la partie (utile endGame)
@@ -74,10 +73,8 @@ public class BoardGui extends Application
 
     public void start(Stage primaryStage)
     {
-        try
-        {
             BorderPane root = new BorderPane();//c'est le Group principale qui contient les trois autres
-            root.setStyle("-fx-background-image: url("+cheminAcces + paysage[0] +");");
+            root.setStyle("-fx-background-image: url('../misc/IMG/"+paysage[0]+"');");
             BorderPane information = new BorderPane();
             Scene scene = new Scene(root,1500,2000);
 
@@ -94,7 +91,8 @@ public class BoardGui extends Application
             Button partir = new Button("quitter la partie");
             partir.setLayoutX(0);
             partir.setStyle("-fx-text-fill: #FF4000; -fx-border-color: red; -fx-background-color: #F5D0A9; -fx-font-size:2em;");
-            partir.setOnAction(e -> {
+            partir.setOnAction(e ->
+            {
                 primaryStage.close();
                 SaveOldGame.saveGame(nomPartie,joueur,plateau,paysage);
                 //Summary.CLOSE();
@@ -113,17 +111,20 @@ public class BoardGui extends Application
             info.setStyle("-fx-text-fill: #FF4000; -fx-border-color: blue; -fx-font-size:5em;");
             info.setPrefWidth(90);
             info.setPrefHeight(90);
-            info.setOnAction(e ->{/*
+            info.setOnAction(e ->
+            {/*
                 Stage stage = new Stage();
                 PageWeb pw = new PageWeb("http://mesprojets.dchtrnd.be/stratego.html#Jouer");
                 pw.start(stage);*/
             });
             bts.getChildren().add(info);
 
-            ImageView interro = new ImageView(new Image(getClass().getResourceAsStream(cheminAcces + "chg.png")));
             chg.setTooltip(new Tooltip("chnager de pion "));
             chg.setPrefWidth(90);
             chg.setPrefHeight(90);
+            Image igIN = new Image(cheminAcces + "chg.png");
+            ImageView interro = new ImageView();
+            interro.setImage(igIN);
             interro.setFitHeight(50);
             interro.setFitWidth(50);
             chg.setGraphic(interro);
@@ -159,7 +160,6 @@ public class BoardGui extends Application
 
             /* -- Méthode pour le primaryStage de cette fenetre -- */
             primaryStage.setScene(scene);
-            primaryStage.setFullScreen(true);
             primaryStage.setTitle("Plateau de Jeu du Stratego");
             primaryStage.setOnCloseRequest(Event::consume); //éviter que l'utilisateur quitte sans sauvegarder
             primaryStage.show();
@@ -171,11 +171,6 @@ public class BoardGui extends Application
                 BoardClick(e.getX(),e.getY(),e.getTarget());
             });
         }
-        catch(Exception e)
-        {
-            //Summary.ERROR(e,"BoardGui");
-        }
-    }
 
     /**
      *Cette méthodes permet d'afficher lors du démarage de la fenetre le plateau de jeu avec

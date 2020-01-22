@@ -7,9 +7,14 @@ import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -38,16 +43,13 @@ public class MainGui extends Application {
     private String[] paysage   = {"foret.PNG","roche.png"};
     private int joueur;
     protected String nomPartie;
-    final String cheminAcces = "../code/Illustration/"; //permet de dire pour l'ensemble des fichier image et vidéo, où il se trouvent dans le dossier.
+    final String cheminAcces = "../misc/IMG/"; //permet de dire pour l'ensemble des fichier image et vidéo, où il se trouvent dans le dossier.
 
     public void start(Stage primaryStage)
     {
-        root.setStyle("-fx-background-color:#ECF6CE; -fx-background-image: url('../code/Illustration/imagefond2.JPG');-fx-background-repeat: no-repeat; -fx-background-position: center;");
+        root.setStyle("-fx-background-color:#ECF6CE;-fx-background-image: url('../misc/IMG/imagefond2.JPG');-fx-background-repeat: no-repeat; -fx-background-position: center;");
         Stage stagesecondaire = new Stage();
         Scene scene = new Scene(root,1850,910);
-        try
-        {
-
             /* -- Les sous titre des posibilité de jeu -- */
             Text seultxt = new Text("Le mode solo :");
             seultxt.setFill(Color.RED);
@@ -71,12 +73,12 @@ public class MainGui extends Application {
             Button dc3    = new Button("champs");
             Button ok     = new Button("OK");
             ComboBox<String> ancienne = new ComboBox();
-            File[] listefichier = SaveOldGame.listItems();
+           // File[] listefichier = SaveOldGame.listItems();
             ancienne.setPrefWidth(300);
-            for(int nb = 0 ; nb < listefichier.length ; nb++)
+           /* for(int nb = 0 ; nb < listefichier.length ; nb++)
             {
                 ancienne.getItems().add(SaveOldGame.analyser(listefichier[nb].toString()));
-            }
+            }*/
             Slider ia = new Slider();
             ia.setMin(1);
             ia.setMax(2);
@@ -119,7 +121,6 @@ public class MainGui extends Application {
             });
             ancienne.valueProperty().addListener(lancerpartie->
             {
-                //System.out.println(ancienne.getValue());
                 SaveOldGame.oldGame(ancienne.getValue());
                 primaryStage.close();
             });
@@ -138,13 +139,6 @@ public class MainGui extends Application {
                 String[] image = {"champs.PNG","trou.PNG"};
                 paysage = image;
             });
-
-            /* -- tout ce qui est là est pour l'image de fond -- */
-            Image ig = new Image(cheminAcces + "imagefond2.JPG");
-            ImageView img = new ImageView();
-            img.setImage(ig);
-            img.setFitHeight(scene.getHeight()-30);
-            img.setFitWidth(scene.getWidth());
 
             /* -- choix des joueurs pour leur couleur et leur pseudo -- */
             HBox hb1 = new HBox();
@@ -262,13 +256,6 @@ public class MainGui extends Application {
             primaryStage.setScene(scene);
             primaryStage.show();
             this.primaryStage = primaryStage;
-        }
-        catch(Exception e)
-        {
-            //Summary.ERROR(e,"MainGui");
-            primaryStage.show();
-            primaryStage.close();
-        }
     }
 
     /**

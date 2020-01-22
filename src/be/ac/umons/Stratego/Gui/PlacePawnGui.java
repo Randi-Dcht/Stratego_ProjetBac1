@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class PlacePawnGui extends Application
 {
-    final String cheminAcces = "../code/Illustration/";
+    final String cheminAcces = "../misc/IMG/";
 
     private Player[] listeJoueur;
     private int nombreJoueur;
@@ -59,7 +59,7 @@ public class PlacePawnGui extends Application
     public void start(Stage stage)
     {
         fond        = new BorderPane();
-        fond.setStyle("-fx-background-image: url('../code/Illustration/imagefond2.JPG');");
+        //fond.setStyle("-fx-background-image: url('../code/Illustration/imagefond2.JPG');");
         Scene scene = new Scene(fond,1200,1200);
 
         Button aide    = new Button("je vous aide");
