@@ -2,9 +2,9 @@ package Stratego.Logique.Player;
 
 public class Couleur
 {
-    final int rouge;
-    final int vert;
-    final int bleu;
+    public final int rouge;
+    public final int vert;
+    public final int bleu;
     final String nom;
 
     public Couleur(int rg , int vt , int bl , String nom_)
